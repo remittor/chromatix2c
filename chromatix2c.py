@@ -25,7 +25,13 @@ print "chromatix_version 0301 at",hex(ver.start())
 
 p = ver.start()
 
-ft = open("chromatix_template.h")
+n = re.search('_common', inputFilename)
+if n is None:
+  tempFilename = "chromatix_template.h"
+else:
+  tempFilename = "chromatix_vfe_template.h"
+
+ft = open(tempFilename)
 t = ft.read()
 ft.close()
 
