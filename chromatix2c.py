@@ -39,7 +39,7 @@ cnt = 0
 x = 0
 
 while (1):
-  n = re.search('`x\w+[^`]*`', t[x:])
+  n = re.search('`x\w+\+?\w?`', t[x:])
   if n is None:
     break
 
